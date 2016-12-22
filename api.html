@@ -1170,7 +1170,7 @@ Khi đó bằng cách chỉ định<code class="prettyprint">expiry_days</code> 
 </tr>
 </tbody></table>
 
-<div name="支払い情報を更新" data-unique="支払い情報を更新"></div><h2 id="支払い情報を更新">支払い情報を更新</h2>
+<div name="支払い情報を更新" data-unique="支払い情報を更新"></div><h2 id="支払い情報を更新">Thay đổi thông tin chi trả</h2>
 
 <blockquote>
 <p>POST https://api.pay.jp/v1/charges/:id</p>
@@ -1209,7 +1209,7 @@ $ch-&gt;save();
 </code></pre>
 
 <blockquote>
-<p>レスポンス</p>
+<p>Response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
@@ -1255,7 +1255,7 @@ $ch-&gt;save();
 </span></code></pre>
 
 <blockquote>
-<p>エラーレスポンス</p>
+<p>Error response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1268,24 +1268,24 @@ $ch-&gt;save();
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>支払い情報を更新します。</p>
+<p>Thay đổi thông tin chi trả</p>
 
 <table><thead>
 <tr>
-<th>引数</th>
-<th>型</th>
-<th>詳細</th>
+<th>Tham số</th>
+<th>Kiểu</th>
+<th>Chi tiết</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>description</td>
 <td>String</td>
-<td>概要</td>
+<td>Mô tả</td>
 </tr>
 <tr>
 <td>metadata</td>
 <td>Object</td>
-<td>キーバリューの任意データ</td>
+<td>Data key-value tùy ý</td>
 </tr>
 </tbody></table>
 
@@ -1321,7 +1321,7 @@ $ch-&gt;refund();
 </code></pre>
 
 <blockquote>
-<p>レスポンス</p>
+<p>Response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
@@ -1367,7 +1367,7 @@ $ch-&gt;refund();
 </span></code></pre>
 
 <blockquote>
-<p>エラーレスポンス</p>
+<p>Error response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1431,7 +1431,7 @@ $ch-&gt;capture();
 </code></pre>
 
 <blockquote>
-<p>レスポンス</p>
+<p>Response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">3500</span><span class="p">,</span><span class="w">
@@ -1477,7 +1477,7 @@ $ch-&gt;capture();
 </span></code></pre>
 
 <blockquote>
-<p>エラーレスポンス</p>
+<p>Error response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
@@ -1544,7 +1544,7 @@ $ch-&gt;capture();
 </code></pre>
 
 <blockquote>
-<p>レスポンス</p>
+<p>Response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"count"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w">
@@ -1600,7 +1600,7 @@ $ch-&gt;capture();
 </span></code></pre>
 
 <blockquote>
-<p>エラーレスポンス</p>
+<p>Error response</p>
 </blockquote>
 <pre class="highlight json"><code><span class="p">{</span><span class="w">
   </span><span class="nt">"error"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
