@@ -1289,7 +1289,7 @@ $ch-&gt;save();
 </tr>
 </tbody></table>
 
-<div name="返金する" data-unique="返金する"></div><h2 id="返金する">返金する</h2>
+<div name="返金する" data-unique="返金する"></div><h2 id="返金する">Hoàn tiền</h2>
 
 <blockquote>
 <p>POST https://api.pay.jp/v1/charges/:id/refund</p>
@@ -1378,24 +1378,24 @@ $ch-&gt;refund();
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>支払い済みとなった処理を返金します。全額返金、及び <code class="prettyprint">amount</code> を指定することで金額の部分返金を行うことができます。ただし部分返金を最初に行った場合、2度目の返金は全額返金しか行うことができないため、ご注意ください。</p>
+<p>Hoàn lại tiền của chi trả đã thực hiện. Có thể hoàn trả đầy đủ hoặc hoàn trả 1 lượng tiền <code class="prettyprint">amount</code> được chỉ định. Tuy nhiên khi thực hiện hoàn trả 1 phần thì lần thứ 2 sẽ chỉ có thể hoàn trả toàn bộ nên hãy chú ý</p>
 
 <table><thead>
 <tr>
-<th>引数</th>
-<th>型</th>
-<th>詳細</th>
+<th>Tham số</th>
+<th>Kiểu</th>
+<th>Chi tiết</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>amount</td>
 <td>Integer</td>
-<td>1~9,999,999の整数</td>
+<td>Số nguyên 1~9,999,999</td>
 </tr>
 <tr>
 <td>refund_reason</td>
 <td>string</td>
-<td>返金理由</td>
+<td>Lí do hoàn trả</td>
 </tr>
 </tbody></table>
 
