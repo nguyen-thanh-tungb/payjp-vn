@@ -4843,9 +4843,9 @@ $su-&gt;delete();
 
 <p>Có thể  sử  dụng khi đăng kí thông tin card cho khách hàng hay khi thực hiện xử lí chi trả</p>
 
-<p>Token đã được sử  dụng 1 lần không thể dùng lại nữa nhưng nếu khách hàng đăng kí card thì bằng cash sử dụng customerID có thể thực hiện xử lí chi trả nhiều lần bằng cùng 1 card
+<p>Token đã được sử  dụng 1 lần không thể dùng lại nữa nhưng nếu khách hàng đăng kí card thì bằng cách sử dụng customerID có thể thực hiện xử lí chi trả nhiều lần bằng cùng 1 card
 
-<div name="トークンを作成" data-unique="トークンを作成"></div><h2 id="トークンを作成">トークンを作成</h2>
+<div name="トークンを作成" data-unique="トークンを作成"></div><h2 id="トークンを作成">Tạo token</h2>
 
 <blockquote>
 <p>POST https://api.pay.jp/v1/tokens</p>
@@ -4954,74 +4954,74 @@ $card = array(
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 
-<p>カード情報を指定して、トークンを生成します。</p>
+<p>Chỉ định thông tin card, đăng kí token</p>
 
-<p>トークンはサーバーサイドからのリクエストでも生成可能ですが、通常は チェックアウトやpayjp.js を利用して、ブラウザ経由でパブリックキーとカード情報を指定して生成します。
-トークンは二度以上使用することができません。</p>
+<p>Token có thể tạo bằng request từ server side nhưng thông thường sẽ sử dụng "checkout" và payjp.js thông qua browser chỉ định public key và thông tin card để tạo ra
+Token không dùng được đến lần thứ 2</p>
 
-<p>チェックアウトやpayjp.jsを使ったトークン化の実装方法については <a href="https://pay.jp/docs/cardtoken">チュートリアル - カード情報のトークン化</a> をご覧ください。</p>
+<p>Về phương pháp implement token hóa sử dụng "Checkout" và payjp.js xem tại <a href="https://pay.jp/docs/cardtoken">Tutorial - Token hóa thông tin card</a></p>
 
 <table><thead>
 <tr>
-<th>引数</th>
-<th>型</th>
-<th>詳細</th>
+<th>Tham số</th>
+<th>Kiểu</th>
+<th>Chi tiết</th>
 </tr>
 </thead><tbody>
 <tr>
 <td>card[number]</td>
 <td>String</td>
-<td><span class="required"><strong>必須</strong></span><br>カード番号</td>
+<td><span class="required"><strong>Required</strong></span><br>Mã số card</td>
 </tr>
 <tr>
 <td>card[exp_month]</td>
 <td>String</td>
-<td><span class="required"><strong>必須</strong></span><br>有効期限月</td>
+<td><span class="required"><strong>Required</strong></span><br>Tháng hết hạn</td>
 </tr>
 <tr>
 <td>card[exp_year]</td>
 <td>String</td>
-<td><span class="required"><strong>必須</strong></span><br>有効期限年</td>
+<td><span class="required"><strong>Required</strong></span><br>Năm hết hạn</td>
 </tr>
 <tr>
 <td>card[cvc]</td>
 <td>String</td>
-<td>3~4桁のCVCコード</td>
+<td>CVC code (3~4 chữ số)</td>
 </tr>
 <tr>
 <td>card[address_state]</td>
 <td>String</td>
-<td>都道府県</td>
+<td>Tỉnh</td>
 </tr>
 <tr>
 <td>card[address_city]</td>
 <td>String</td>
-<td>市区町村</td>
+<td>Quận huyện</td>
 </tr>
 <tr>
 <td>card[address_line1]</td>
 <td>String</td>
-<td>番地など</td>
+<td>Số nhà (khu nhà)</td>
 </tr>
 <tr>
 <td>card[address_line2]</td>
 <td>String</td>
-<td>建物名など</td>
+<td>Tên tòa nhà</td>
 </tr>
 <tr>
 <td>card[address_zip]</td>
 <td>String</td>
-<td>郵便番号</td>
+<td>Mã bưu điện</td>
 </tr>
 <tr>
 <td>card[country]</td>
 <td>String</td>
-<td>2桁のISOコード(e.g. JP)</td>
+<td>ISO code (2 kí tự) (e.g. JP)</td>
 </tr>
 <tr>
 <td>card[name]</td>
 <td>String</td>
-<td>カード保有者名(e.g. “YUI ARAGAKI”)</td>
+<td>Tên chủ thẻ (e.g. “YUI ARAGAKI”)</td>
 </tr>
 </tbody></table>
 
